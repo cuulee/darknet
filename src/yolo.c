@@ -10,12 +10,14 @@
 #include "opencv2/highgui/highgui_c.h"
 #endif
 
-char *voc_names[] = {"aeroplane", "bicycle", "bird", "boat", "bottle", "bus", "car", "cat", "chair", "cow", "diningtable", "dog", "horse", "motorbike", "person", "pottedplant", "sheep", "sofa", "train", "tvmonitor"};
+//char *voc_names[] = {"aeroplane", "bicycle", "bird", "boat", "bottle", "bus", "car", "cat", "chair", "cow", "diningtable", "dog", "horse", "motorbike", "person", "pottedplant", "sheep", "sofa", "train", "tvmonitor"};
+
+char *voc_names[] = {"cube","car","coffee","star","mobile"};
 
 void train_yolo(char *cfgfile, char *weightfile)
 {
-    char *train_images = "/data/voc/train.txt";
-    char *backup_directory = "/home/pjreddie/backup/";
+    char *train_images = "/Users/mjai32/code/darknet/tableData/data/train.txt";
+    char *backup_directory = "/Users/mjai32/backup/";
     srand(time(0));
     char *base = basecfg(cfgfile);
     printf("%s\n", base);
@@ -120,7 +122,7 @@ void validate_yolo(char *cfgfile, char *weightfile)
 
     char *base = "results/comp4_det_test_";
     //list *plist = get_paths("data/voc.2007.test");
-    list *plist = get_paths("/home/pjreddie/data/voc/2007_test.txt");
+    list *plist = get_paths("/Users/mjai32/code/darknet/tableData/data/test.txt");
     //list *plist = get_paths("data/voc.2012.test");
     char **paths = (char **)list_to_array(plist);
 

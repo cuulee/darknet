@@ -47,6 +47,8 @@ void *fetch_in_thread(void *ptr)
     return 0;
 }
 
+
+// Detection being done here ..
 void *detect_in_thread(void *ptr)
 {
     float nms = .4;
@@ -154,7 +156,7 @@ void demo(char *cfgfile, char *weightfile, float thresh, int cam_index, const ch
     if(!prefix){
         cvNamedWindow("Demo", CV_WINDOW_NORMAL); 
         cvMoveWindow("Demo", 0, 0);
-        cvResizeWindow("Demo", 1352, 1013);
+        //cvResizeWindow("Demo", 1352, 1013);
     }
 
     double before = get_wall_time();

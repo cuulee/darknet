@@ -1,0 +1,6 @@
+classes = 5
+train  = /Users/mjai32/code/darknet/tableData/data/train.txt
+valid  = /Users/mjai32/code/darknet/tableData/data/test.txt
+names = data/table.names
+backup = /Users/mjai32/backup/
+
