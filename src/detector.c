@@ -56,6 +56,8 @@ void train_detector(char *datacfg, char *cfgfile, char *weightfile, int *gpus, i
     char **paths = (char **)list_to_array(plist);
 
     load_args args = {0};
+    printf("imgs %d\n", imgs);
+    
     args.w = net.w;
     args.h = net.h;
     args.paths = paths;
@@ -83,7 +85,7 @@ void train_detector(char *datacfg, char *cfgfile, char *weightfile, int *gpus, i
             int dim = (rand() % 10 + 10) * 32;
             if (get_current_batch(net)+100 > net.max_batches) dim = 544;
             //int dim = (rand() % 4 + 16) * 32;
-            printf("%d\n", dim);
+            printf("DIMM %d\n", dim);
             args.w = dim;
             args.h = dim;
 
