@@ -493,7 +493,7 @@ image load_image_cv(char *filename, int channels)
         return make_image(10,10,3);
         //exit(0);
     }
-    fprintf(stdout, "image loaded \"%s\"\n", filename);
+    //fprintf(stdout, "image loaded \"%s\"\n", filename);
     
     
     image out = ipl_to_image(src);
